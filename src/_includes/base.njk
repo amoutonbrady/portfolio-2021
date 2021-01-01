@@ -38,7 +38,13 @@
 
     {% include "partials/footer.njk" %}
 
-    <script type="module" src="https://cdn.jsdelivr.net/npm/@pwabuilder/pwaupdate"></script>
-    <pwa-update offlineToastDuration="0" swpath="/sw.js"></pwa-update>
+    <script type="module">
+      import { Workbox } from 'https://storage.googleapis.com/workbox-cdn/releases/6.0.2/workbox-window.prod.mjs';
+      
+      if ('serviceWorker' in navigator) {
+        const wb = new Workbox('/sw.js');
+        wb.register();
+      }
+      </script>
   </body>
 </html>
