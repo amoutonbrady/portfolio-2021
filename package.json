@@ -1,0 +1,15 @@
+{
+  "name": "portfolio2021",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "eleventy --serve"
+  },
+  "keywords": [],
+  "author": "Alexandre Mouton-Brady",
+  "license": "ISC",
+  "devDependencies": {
+    "@11ty/eleventy": "^0.11.1"
+  }
+}

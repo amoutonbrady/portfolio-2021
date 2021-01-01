@@ -1,0 +1,16 @@
+Portfolio/blog todos:
+  Layouts:
+    ☐ Base layout
+    ☐ Home layout
+      ☐ Link to blogs posts
+      ✘ Link to about page @cancelled(21-01-01 14:44)
+      Do this in the footer
+      ☐ Link to projects page
+    ☐ Blog list
+    ☐ Blog details
+    ☐ Project list
+    ☐ Project details
+
+  Goals:
+    ☐ No js
+    ☐ < 15kb css minified (not compressed)
