@@ -5,7 +5,7 @@ const pictureShortcode = require("./shortcodes/picture.shortcode");
 
 module.exports = (config) => {
   config.addPlugin(syntaxHighlight);
-  config.addPassthroughCopy("static/");
+  config.addPassthroughCopy({ "static/": '/' });
   config.addNunjucksAsyncShortcode("responsiveimage", pictureShortcode);
 
   config.addTransform("htmlmin", (content, outputPath) => {

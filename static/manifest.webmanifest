@@ -11,11 +11,11 @@
   "prefer_related_applications": false,
   "icons": [
     {
-      "src": "/static/android-chrome-192x192.png",
+      "src": "/android-chrome-512x512.png",
       "sizes": "512x512"
     },
     {
-      "src": "/static/android-chrome-192x512.png",
+      "src": "/android-chrome-192x192.png",
       "sizes": "192x192"
     }
   ]
