@@ -1,16 +1,29 @@
 Portfolio/blog todos:
   Layouts:
-    ☐ Base layout
-    ☐ Home layout
-      ☐ Link to blogs posts
+    ☐ Base layout @started(21-01-01 15:18)
+    ✔ Home layout @started(21-01-01 16:01) @done(21-01-01 17:26) @lasted(1h25m35s)
+      ✔ Link to blogs posts @done(21-01-01 17:26)
       ✘ Link to about page @cancelled(21-01-01 14:44)
       Do this in the footer
-      ☐ Link to projects page
-    ☐ Blog list
-    ☐ Blog details
-    ☐ Project list
-    ☐ Project details
+      ✔ Link to projects page @done(21-01-01 17:26)
+    ✔ Blog list @done(21-01-01 17:26)
+    ✔ Blog details @done(21-01-01 17:26)
+    ✔ Project list @done(21-01-01 17:26)
+    ✔ Project details @done(21-01-01 17:26)
+
+  Partials:
+    Header:
+      ✔ Profile picture @done(21-01-01 16:02)
+      ☐ Social links (with icons)
+
+    Footer:
+      ✘ A bio to act like an about page @cancelled(21-01-01 17:25)
 
   Goals:
-    ☐ No js
+    ✔ No js @done(21-01-01 17:25)
+    We might use turbolink tho which a progressive enhancement
     ☐ < 15kb css minified (not compressed)
+
+  Assets:
+    ✔ Find a way to process the images @done(21-01-01 16:03)
+    ☐ Find a way to integrate tailwind @started(21-01-01 17:26)

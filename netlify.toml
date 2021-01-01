@@ -1,0 +1,10 @@
+[[headers]]
+  for = "*.avif"
+  [headers.values]
+    Content-Type = "image/avif"
+    Content-Disposition = "inline"
+
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200

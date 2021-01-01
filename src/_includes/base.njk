@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="fr" style="scroll-behavior: smooth;">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>
+      {% block title %}
+        amoutonbrady | {{ title }}
+      {% endblock %}
+    </title>
+    <meta name="description" content="{{ description }}">
+    <meta name="theme-color" content="#000000">
+
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-title" content="amoutonbrady">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+
+    <link href="/styles.css?ts={{ amoutonbrady.now }}" rel="stylesheet">
+
+    <link href="/static/manifest.webmanifest" rel="manifest">
+
+    <link href="/static/favicon.ico" rel="icon" type="image/x-icon" >
+    <link href="/apple-touch-icon.png" rel="apple-touch-icon" sizes="180x180" >
+    <link href="/static/favicon-32x32.png" rel="icon" type="image/png" sizes="32x32" >
+    <link href="/static/favicon-16x16.png" rel="icon" type="image/png" sizes="16x16" >
+
+    {% block css %} {% endblock %}
+  </head>
+
+  <body class="antialiased text-gray-900">
+    {% include "partials/header.njk" %}
+
+    <main id="main" class="prose max-w-2xl mx-auto mt-20 px-2">
+      {% block content %}
+        {{ content | safe }}
+      {% endblock %}
+    </main>
+
+    {% include "partials/footer.njk" %}
+
+    <script type="module" src="https://cdn.jsdelivr.net/npm/@pwabuilder/pwaupdate"></script>
+    <pwa-update offlineToastDuration="0" swpath="/sw.js"></pwa-update>
+  </body>
+</html>

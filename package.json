@@ -1,15 +1,31 @@
 {
-  "name": "portfolio2021",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "name": "portfolio-2021",
   "scripts": {
-    "dev": "eleventy --serve"
+    "clear": "del dist/*",
+    "dev": "run-s clear dev:tw dev:content",
+    "dev:tw": "ELEVENTY_ENV=development postcss src/_assets/tailwind.css -o dist/styles.css",
+    "dev:content": "eleventy --serve",
+    "build": "run-s clear build:content build:tw build:sw",
+    "build:content": "eleventy",
+    "build:tw": "ELEVENTY_ENV=production postcss src/_assets/tailwind.css -o dist/styles.css",
+    "build:sw": "workbox generateSW workbox-config.js"
   },
-  "keywords": [],
   "author": "Alexandre Mouton-Brady",
-  "license": "ISC",
   "devDependencies": {
-    "@11ty/eleventy": "^0.11.1"
+    "@11ty/eleventy": "^0.11.1",
+    "@11ty/eleventy-img": "^0.6.0",
+    "@11ty/eleventy-plugin-syntaxhighlight": "^3.0.4",
+    "@tailwindcss/typography": "^0.3.1",
+    "@types/dedent": "^0.7.0",
+    "autoprefixer": "^10.1.0",
+    "cssnano": "^4.1.10",
+    "dedent": "^0.7.0",
+    "del-cli": "^3.0.1",
+    "html-minifier": "^4.0.0",
+    "npm-run-all": "^4.1.5",
+    "postcss": "^8.2.2",
+    "postcss-cli": "^8.3.1",
+    "tailwindcss": "^2.0.2",
+    "workbox-cli": "^6.0.2"
   }
 }

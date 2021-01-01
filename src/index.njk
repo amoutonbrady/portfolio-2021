@@ -1,0 +1,68 @@
+---
+layout: base
+title: Page d'accueil
+description: Développeur web touche à tout avec une préférence pour le front
+---
+
+<section id="biography">
+  <h1 class="text-center">
+    <span>Alexandre Mouton-Brady</span>
+    <br />
+    <small class="font-normal">Développeur front-end</small>
+  </h1>
+
+  <!-- TODO: Translate -->
+  <p>
+    Je suis un développeur web touche à tout avec une préférence pour le front.
+    Je prends un malin plaisir à rendre le web plus vivant, grâce à mes
+    compétences en JS et en CSS. J’ai toujours la variable performance à
+    l’esprit et je défends fièrement les PWA pour un futur plus vert.
+  </p>
+
+  <!-- TODO: Translate -->
+  <p>
+    Plus récemment, j’essaie de travailler mon côté pédagogue et mon aisance
+    orale en faisant des lives sur twitch. Vous pouvez vous faire une idée en
+    français ou en anglais en regardant les replays sur YouTube.
+  </p>
+</section>
+
+{% if collections.posts %}
+  <section id="blog">
+    <h2>My blog</h2>
+
+    <a href="/blog">See my latest articles</a>
+  </section>
+{% endif %}
+
+{% if collections.projects %}
+  <section id="projects">
+    <h2>Mes derniers projets</h2>
+
+    <ul>
+      {% for project in collections.projects %}
+        <li>
+          <a href="{{ project.url }}">{{ project.data.title }}</a>
+        </li>
+      {% endfor %}
+    </ul>
+
+    <a href="/projects">➡️ Voir tous mes projets</a>
+  </section>
+{% endif %}
+
+<section id="opensource">
+  <h2>Mes projets open source</h2>
+
+  <p>Depuis que je suis rentré dans le monde du développement web, j’ai toujours voulu mettre mes compétences au profit des autres.</p>
+
+  <p>
+    C’est pourquoi, après quelques années d’expertise professionnelle, je me suis lancé dans le vaste monde de l’open source.
+    Aujourd’hui, je compte une centaine de repositories sur Github, allant de l’expérimentation à des outils utilisés par des développeurs en
+    tout genre.
+  </p>
+
+  <p>
+    Vous pouvez voir l’ensemble de mes projets sur mon profil <a href="https://github.com/amoutonbrady">github</a>.
+  </p>
+</section>
